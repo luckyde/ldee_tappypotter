@@ -1,0 +1,25 @@
+{
+  "name": "es6-starter-template",
+  "version": "1.0.0",
+  "default": "dist/index.html",
+  "description": "WandTapper",
+  "repository": "",
+  "author": "Lucky Dee",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4",
+    "shader-park-core": "^0.1.15",
+    "three": "^0.138.3",
+    "three-nebula": "^10.0.3",
+    "typography": "^0.16.21",
+    "typography-theme-parnassus": "^0.16.19"
+  },
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
+}

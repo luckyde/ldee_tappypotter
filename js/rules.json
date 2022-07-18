@@ -1,0 +1,22 @@
+{
+  "score":{
+    "increments" : 10
+  },
+  "unlocks":[
+    {
+      "value": 250,
+      "name": "cool",
+      "tapBoostMultiplier":2.5
+    },{
+      "value": 500,
+      "name": "awesome",
+      "tapBoostMultiplier":5
+    },{
+      "value": 1000,
+      "name": "yass",
+      "tapBoostMultiplier":10
+    }
+  ],
+  "bonusTimerSeconds":3,
+  "bonusTimerTimeoutSeconds":10
+}
