@@ -13,7 +13,7 @@ import parnassusTheme from 'typography-theme-parnassus'
 parnassusTheme.baseFontSize = '22px' // was 20px.
 parnassusTheme.scaleRatio = 3;
 const typography = new Typography(parnassusTheme)
- 
+
 
 // Or insert styles directly into the <head> (works well for client-only
 // JS web apps.)
@@ -32,10 +32,9 @@ camera.position.x = 0.3045067164595385;
 camera.position.y =  0.0;
 camera.position.z =  3.175945569919342;
 camera.updateProjectionMatrix();
-let renderer = new WebGLRenderer({ antialias: false ,
+let renderer = new WebGLRenderer({ antialias: false ,alpha:true,
   powerPreference: "high-performance",canvas:canvas});
 
-renderer.setClearColor( new Color(0.322,0.176,0.416), 1 );
 function sizeCanvas(){
   renderer.setPixelRatio( window.devicePixelRatio  );
     renderer.setSize( stage.offsetWidth, stage.offsetWidth);

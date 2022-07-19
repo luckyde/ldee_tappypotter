@@ -1,8 +1,7 @@
 // Option 1: Import the entire three.js core library.
 import * as THREE from 'three';
 import * as Proton from "three.proton.js";
-let clock = new THREE.Clock();
-let proton;
+let clock = new THREE.Clock(); 
 function initProton(scene) {
     proton = new Proton();
     tapEmmiter = createEmitter()

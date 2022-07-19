@@ -116,7 +116,7 @@ function setupAnimations(){
   bonusAnimation.pause();
   //timer kicked in after bonus
   bonusTimeoutAnimation = gsap.timeline()
-  .add(function(){ bonusSpeedOn =false; document.getElementById("score").style.color = "black"; },0)
+  .add(function(){ bonusSpeedOn =false; document.getElementById("score").style.color = "white"; },0)
     .set("#bonus_timer",{backgroundColor:"gray",width:"100%"},0)
     .add( function(){   gE('sideBtn_bonus_txt').innerHTML = "Bonus Resetting " } ,0)
     .to("#bonus_timer", rules.bonusTimerTimeoutSeconds*0.98,{width:"0%"})

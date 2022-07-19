@@ -4,13 +4,13 @@
     <title>Wand Tapper</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
   <div id="score" class="texts ">
-      Score: 0 
+      Score: 0
   </div>
   <div id="mainStage">
     <canvas id="mainCanvas"></canvas>
@@ -18,7 +18,7 @@
   <div id="sideBtn_next" class="texts"> Next Unlock at: <span id="numNextUnlock">x</span> points </div>
   <div id="sideBtn_bonus" class="texts"><div id="bonus_timer"></div><div id="sideBtn_bonus_txt">TAP TO TRIGGER BONUS</div></div>
   <script type="text/javascript">
-    let wardInfo=[],threeTime,tapEmmiter , bonusOn = false ,clickCount=0, tapTimeline,
+    let wardInfo=[],threeTime,tapEmmiter ,proton,emitter, bonusOn = false ,clickCount=0, tapTimeline,
     bonusSpeedOn =false;
   </script>
   <script src="./js/index.js" type="module"></script>
