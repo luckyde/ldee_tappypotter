@@ -2,6 +2,7 @@
 import * as THREE from 'three';
 import * as Proton from "three.proton.js";
 let clock = new THREE.Clock();
+let proton;
 function initProton(scene) {
     proton = new Proton();
     tapEmmiter = createEmitter()
