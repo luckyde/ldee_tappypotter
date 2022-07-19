@@ -4,7 +4,7 @@
 // To pass external data use the 'input' function. See other examples.
 
 export function spCode()  {
-  backgroundColor(vec3(1));
+  backgroundColor(vec3(0.322,0.176,0.416));
   // Put your Shader Park Code here
  /*
   rotateY(mouse.x * PI / 2 + time*.5);
@@ -59,8 +59,11 @@ export function spCode()  {
     let MotionRadius = 0.5;
     let figure8Scale =1
     let motion = vec3(0);
-    motion.x= figure8Scale * sin(2*motionTime) / 2;
-    motion.y = figure8Scale * cos(motionTime);
+    let xPos = figure8Scale * sin(2*motionTime) / 2;
+    let yPos = figure8Scale * cos(motionTime);
+
+    motion.x=xPos * 1.0;
+    motion.y =yPos;
     motion*=MotionRadius;
 
     displace(0,0,wand.height*-1)
@@ -69,9 +72,12 @@ export function spCode()  {
     displace(0,0,wand.height *1)
 
     displace(motion)
+    wardInfo = [xPos,yPos,0];
+
+    console.log(wardInfo);
     wandShape();
    // particleCyclinder();
 
   }
-  wandMotion(); 
+  wandMotion();
 };

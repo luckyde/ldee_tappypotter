@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "gsap": "^3.10.4",
+    "scale-text": "^0.2.2",
     "shader-park-core": "^0.1.15",
     "three": "^0.138.3",
     "three-nebula": "^10.0.3",
+    "three.proton.js": "^0.2.3",
     "typography": "^0.16.21",
     "typography-theme-parnassus": "^0.16.19"
   },

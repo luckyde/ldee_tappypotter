@@ -23,19 +23,21 @@ let bonusTimeoutAnimation;
 let bonusDisabledAnimation;
 function updateScore(){
   currentScore+= (rules.score.increments * currentScoreMultiplier );
-  numScore.innerHTML = currentScore;
+  numScore.innerHTML = "Score: "+currentScore;
 
 
 
 }
 
 function tap(){
+  clickCount++;
+  tapTimeline.restart();
+  tapEmmiter.emit("once")
 
   //used to check if you've hit the max.. game over stage of rule limits
   hitRulesLimit = nextScoreStage>=unlockCount;
 
 
-  console.log(hitRulesLimit);
   updateScore();
 
   if(hitRulesLimit == false ){ // check if you've hit the limit
@@ -60,6 +62,8 @@ function tap(){
 }
 function tapBonus(){
   if(bonusOn){ //enabled after first unlock is reached
+
+      document.getElementById("score").style.color = "green";
     if(bonusAnimation.isActive() == false && bonusTimeoutAnimation.isActive()==false ){
 
       bonusAnimation.restart();
@@ -67,6 +71,8 @@ function tapBonus(){
     }
     tap(); //Temporarily turn htis button into a tap button for convenience
   }else{
+
+
     gE('sideBtn_bonus_txt').innerHTML = "NOT YET! "
 
     bonusDisabledAnimation.restart();
@@ -83,7 +89,7 @@ function updateGoals(){
 export function tapEvent(stage){
 
   rules = require('./rules.json');
-  numScore = gE('numScore');
+  numScore = gE('score');
   numNextUnlock = gE('numNextUnlock');
   tapBonusBtn = gE('sideBtn_bonus');
 
@@ -105,10 +111,12 @@ function setupAnimations(){
   //setup animation for bonus
   //bonus kicked in
   bonusAnimation =   gsap.timeline({onComplete: bonusTimeOut})
+  .add(function(){ bonusSpeedOn =true;},0)
     .to("#bonus_timer", rules.bonusTimerSeconds,{width:"0%"})
   bonusAnimation.pause();
   //timer kicked in after bonus
   bonusTimeoutAnimation = gsap.timeline()
+  .add(function(){ bonusSpeedOn =false; document.getElementById("score").style.color = "black"; },0)
     .set("#bonus_timer",{backgroundColor:"gray",width:"100%"},0)
     .add( function(){   gE('sideBtn_bonus_txt').innerHTML = "Bonus Resetting " } ,0)
     .to("#bonus_timer", rules.bonusTimerTimeoutSeconds*0.98,{width:"0%"})
