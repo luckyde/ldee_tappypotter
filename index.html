@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Wand Tapper</title>
+    <title>Tappy Potter</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="/css/fonts.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- import the webpage's stylesheet -->
   </head>
   <body>
-  <div id="score" class="texts ">
-      Score: 0
+    <div id="rotator">PLEASE ROTATE PHONE :)<p>(OR RESIZE WINDOW) </p></div>
+  <div id="doc_wrapper">
+
+    <div id="scoreContainer" class="texts ">  <span id="score" class="textOffset">0</span></div>
+    <div id="nextAchievement" class="texts "><div id="achievement_bar"></div><div id="achievement_badge"></div>   <span id="enter_txt" class="textOffset">wimpy wizard
+</span></div>
+    <div id="instructions">  </div>
+    <div id="mainStage">
+      <canvas id="mainCanvas"></canvas>
+    </div>  <div id="sideBtn_next" class="texts" onclick="location.href='https://thisgoodboy.com'">  </div>
+    <div id="sideBtn_bonus" class="texts">
+        <div id="bonus_on" class="bonusImage"></div>
+        <div id="bonus_reloading" class="bonusImage"></div>
+        <div id="bonus_off" class="bonusImage"></div>
+
+    </div>
+    <div id="audio" class="audio_on">
+
+    </div>
+    <div id="extraChar">
+
+    </div>
   </div>
-  <div id="mainStage">
-    <canvas id="mainCanvas"></canvas>
-  </div>
-  <div id="sideBtn_next" class="texts"> Next Unlock at: <span id="numNextUnlock">x</span> points </div>
-  <div id="sideBtn_bonus" class="texts"><div id="bonus_timer"></div><div id="sideBtn_bonus_txt">TAP TO TRIGGER BONUS</div></div>
   <script type="text/javascript">
-    let wardInfo=[],threeTime,tapEmmiter ,proton,emitter, bonusOn = false ,clickCount=0, tapTimeline,
+    let wardInfo=[],threeTime,tapEmmiter ,coinEmitter,proton,emitter, bonusOn = false ,clickCount=0, tapTimeline,
     bonusSpeedOn =false;
   </script>
   <script src="./js/index.js" type="module"></script>
+
   </body>
 </html>

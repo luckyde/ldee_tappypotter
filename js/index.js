@@ -7,12 +7,6 @@ import gsap from "gsap";
 let wandPos=0;
 import { spCode } from './spCode.js';
 
-//TYPOGRAPHY
-import Typography from 'typography'
-import parnassusTheme from 'typography-theme-parnassus'
-parnassusTheme.baseFontSize = '22px' // was 20px.
-parnassusTheme.scaleRatio = 3;
-const typography = new Typography(parnassusTheme)
 
 
 // Or insert styles directly into the <head> (works well for client-only
@@ -20,6 +14,7 @@ const typography = new Typography(parnassusTheme)
 // typography.injectStyles()
 
 let scene = new Scene();
+scene.background = new Color( '#FFFFFF' );
 let renderParticle  ;
 let params = { time: 0 };
 //let canvasSize = { width: document.get}
@@ -32,7 +27,7 @@ camera.position.x = 0.3045067164595385;
 camera.position.y =  0.0;
 camera.position.z =  3.175945569919342;
 camera.updateProjectionMatrix();
-let renderer = new WebGLRenderer({ antialias: false ,alpha:true,
+let renderer = new WebGLRenderer({ antialias: false ,
   powerPreference: "high-performance",canvas:canvas});
 
 function sizeCanvas(){
@@ -42,7 +37,7 @@ function sizeCanvas(){
 // // lighting
 // var ambientLight = new AmbientLight(0x110011);
 // scene.add(ambientLight);
-const aLight = new AmbientLight( 0xffffff, .6,  10, 10 );
+const aLight = new AmbientLight( 0xffffff, 1.6,  2, 120 );
 scene.add( aLight )
 var pointLight = new PointLight(0xffffff, .4, 100, 0.06);
 pointLight.position.set(-1.3, 1, 0);
@@ -111,3 +106,6 @@ let render = () => {
 };
 
 render();
+document.addEventListener('touchmove', function (event) {
+  if (event.scale !== 1) { event.preventDefault(); }
+}, { passive: false });

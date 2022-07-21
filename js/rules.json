@@ -4,19 +4,130 @@
   },
   "unlocks":[
     {
+      "value": 0,
+      "name": "wimpy wizard",
+      "tapBoostMultiplier":1
+    },
+    {
       "value": 250,
-      "name": "cool",
+      "name": "Wand You Up",
       "tapBoostMultiplier":2.5
     },{
       "value": 500,
-      "name": "awesome",
+      "name": "Dumbledork",
       "tapBoostMultiplier":5
     },{
       "value": 1000,
-      "name": "yass",
+      "name": "Knights of Walpurgis",
       "tapBoostMultiplier":10
+    },{
+      "value": 2500,
+      "name": "Remembrall",
+      "tapBoostMultiplier":25
+    },{
+      "value": 5000,
+      "name": "Dumbledamn",
+      "tapBoostMultiplier":50
+    },{
+      "value": 10000,
+      "name": "The Chamber of Seacrest",
+      "tapBoostMultiplier":100
+    },{
+      "value": 25000,
+      "name": "Mumbulus Mumbletonia",
+      "tapBoostMultiplier":250
+    },{
+      "value": 50000,
+      "name": "The bloody morons",
+      "tapBoostMultiplier":500
+    },{
+      "value": 100000,
+      "name": "Potion’s Master",
+      "tapBoostMultiplier":1000
+    },{
+      "value": 250000,
+      "name": "Siriusly?",
+      "tapBoostMultiplier":2500
+    },{
+      "value": 500000,
+      "name": "Hungry Hungry Hippogriff",
+      "tapBoostMultiplier":5000
+    },{
+      "value": 1000000,
+      "name": "Law and Auror",
+      "tapBoostMultiplier":10000
+    },{
+      "value": 2500000,
+      "name": "Poltergeist",
+      "tapBoostMultiplier":25000
+    },{
+      "value": 5000000,
+      "name": "Snitch in Time",
+      "tapBoostMultiplier":50000
+    },{
+      "value": 10000000,
+      "name": "Snapes on a plane",
+      "tapBoostMultiplier":100000
+    },{
+      "value": 250000000,
+      "name": "Goblet of Ire",
+      "tapBoostMultiplier":250000
+    },{
+      "value": 500000000,
+      "name": "Hit it and Quidditch",
+      "tapBoostMultiplier":500000
+    },{
+      "value": 1000000000,
+      "name": "Accio Beer!",
+      "tapBoostMultiplier":1000000
+    },{
+      "value": 2500000000,
+      "name": "Voldy’s Moldies",
+      "tapBoostMultiplier":2500000
+    },{
+      "value": 5000000000,
+      "name": "That’s So Ravenclaw",
+      "tapBoostMultiplier":5000000
+    },{
+      "value": 10000000000,
+      "name": "The Mudbloods",
+      "tapBoostMultiplier":10000000
+    },{
+      "value": 25000000000,
+      "name": "Chicken & Quaffles",
+      "tapBoostMultiplier":25000000
+    },{
+      "value": 50000000000,
+      "name": "Smarter Than the Cat",
+      "tapBoostMultiplier":50000000
+    },{
+      "value": 100000000000,
+      "name": "Granger Zone",
+      "tapBoostMultiplier":100000000
+    },{
+      "value": 250000000000,
+      "name": "The Half Blood Artist Formerly Known As Prince",
+      "tapBoostMultiplier":250000000
+    },{
+      "value": 500000000000,
+      "name": "Peter Pettigrew’s Petting Zoo",
+      "tapBoostMultiplier":500000000
+    },{
+      "value": 1000000000000,
+      "name": "99 Problems But A Snitch Ain’t one",
+      "tapBoostMultiplier":1000000000
+    },{
+      "value": 2500000000000,
+      "name": "Snitches Get Stitches",
+      "tapBoostMultiplier":2500000000
+    },{
+      "value": 5000000000000,
+      "name": "Dumb and dumbledore",
+      "tapBoostMultiplier":5000000000
     }
   ],
   "bonusTimerSeconds":3,
-  "bonusTimerTimeoutSeconds":10
+  "bonusTimerTimeoutSeconds":3,
+  "extraCharTimerSeconds":2,
+  "extraCharTimerTimeoutSeconds":20
 }

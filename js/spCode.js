@@ -4,7 +4,7 @@
 // To pass external data use the 'input' function. See other examples.
 
 export function spCode()  {
-  backgroundColor(vec3(0.322,0.176,0.416));
+  backgroundColor(vec3(1));
   // Put your Shader Park Code here
  /*
   rotateY(mouse.x * PI / 2 + time*.5);
@@ -22,10 +22,32 @@ export function spCode()  {
 
   let wand = {width: .04, height: .2}
   let wandShape = shape(() => {
-    rotateX(PI*0.3)
-    rotateZ(PI*0.2)
-   // displace(0,wand.height/2,0)
-    cylinder(wand.width, wand.height);
+
+    // displace(0,wand.height/2,0)
+
+    // displace(0,wand.height/2,0
+    let s = getSpace();
+    let n = noise(s);
+    let multT = 0.2;
+    displace(s.y*n*6*sin(n*6.3)*0.03*multT,2*s.z*sin(time*1)*0.11, sin(50*(s.y+(time*3)*.1)*0.3)*s.z*sin(n*0.5)*multT);
+    let col1 = vec3(0.478,0.065,0.065);
+    let col2 = vec3(0.278,0.035,0.035);
+    let noiseScale = 28;
+    let colorNoise = 0.5 * noise(noiseScale * s + time) + 0.5;
+    colorNoise*=3;
+    col1 *= colorNoise*2;
+    col2 *= colorNoise;
+    color(col1);
+    cylinder(wand.width*.4, wand.height);
+    displace(0,wand.height*.55,0);
+    color(col2);
+    cylinder(wand.width*.42, wand.height*.5);
+    reset();
+    displace(0,wand.height*1.2,0);
+    color(vec3(0,0,0));
+
+    cylinder(wand.width*.45+nsin(time*3)*.001, wand.height*.2);
+
   });
   let particleCyclinder = shape(() =>{
     displace(0,-0.3,0)
@@ -75,6 +97,8 @@ export function spCode()  {
     wardInfo = [xPos,yPos,0];
 
     console.log(wardInfo);
+    rotateX(PI*0.3)
+    rotateZ(PI*0.2)
     wandShape();
    // particleCyclinder();
 

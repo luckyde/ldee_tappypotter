@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "gsap": "^3.10.4",
+    "howler": "^2.2.3",
     "scale-text": "^0.2.2",
     "shader-park-core": "^0.1.15",
     "three": "^0.138.3",
